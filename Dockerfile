@@ -7,4 +7,4 @@ COPY . /app/
 WORKDIR /app/
 RUN git clone https://github.com/TheTeamAlexa/AlexaMusic AlexaMusic
 RUN cd AlexaMusic && pip3 install -U -r requirements.txt
-CMD python3 -m AlexaMusic
+CMD cd AlexaMusic && bash start
