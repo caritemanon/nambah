@@ -7,4 +7,4 @@ COPY . /app/
 WORKDIR /app/
 RUN git clone  git clone git clone https://github.com/naya1503/Naya-Userbot
 RUN cd cd Naya-Userbot && pip3 install -U -r re*/st*/optional-requirements.txt && pip3 install -U -r requirements.txt
-CMD cd cd Naya-Userbot && bash installer.sh
+CMD cd cd Naya-Userbot && bash start
