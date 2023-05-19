@@ -1,69 +1,115 @@
 {
-    "name": "Aastha Music Bot ",
-    "description": "Made With Source Of Yukki Gban Added, Customize Button Added Play Audio And Video Song On Telegram Groups.",
-    "logo": "https://telegra.ph/file/d8db78924684b505c3048.jpg",
+
+    "name": "Naya UserBot",
+
+    "description": "Naya Userbot Dibuat Untuk String Telethon Dan Pyrogram Untuk ID 5 Pasti Aman.",
+
+    "logo": "https://graph.org/file/60408fea8439e6702674d.jpg",
+
     "keywords": [
-    "python3",
-    "telegram",
-    "bot",
-    "Alexa",
-    "aasthamusicbot",
-    "alexamusicbot",
-    "pyrogram"
+
+        "Telethon",
+
+        "Pyrogram"
+
     ],
+
+    "repository": "https://github.com/caritemanon/nambah",
+
+    "success_url": "https://t.me/rizzvbss",
+
     "stack": "container",
+
     "env": {
-      "API_ID": {
-        "description": "Get this value from https://my.telegram.org",
-        "value": "",
-        "required": true
-      },
-      "API_HASH": {
-        "description": "Get this value from https://my.telegram.org",
-        "value": "",
-        "required": true
-      },
-      "BOT_TOKEN": {
-        "description": "A Bot's token from Botfather",
-        "value": "",
-        "required": true
-      },
-      "MONGO_DB_URI": {
-        "description": "Mongo DB URL",
-        "value": "",
-        "required": true
-      },
-      "STRING_SESSION": {
-        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
-        "value": "",
-        "required": true
-      },
-      "HEROKU_API_KEY": {
-        "description": "Your Heroku account's API key",
-        "value": "",
-        "required": false
-      },
-      "HEROKU_APP_NAME": {
-        "description": "Your heroku app name",
-        "value": "",
-        "required": false
-      },
-      "LOG_GROUP_ID": {
-        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Use only Group. Please don't use Channel ID.",
-        "value": "",
-        "required": true
-      }
+
+        "API_ID": {
+
+            "description": "Au ya cek my.telegram.org",
+
+            "required": true
+
+        },
+
+        "API_HASH": {
+
+            "description": "Au ya cek my.telegram.org",
+
+            "required": true
+
+        },
+
+        "SESSION": {
+
+            "description": "Silakan isi Telethon Atau Pyrogram V2",
+
+            "value": ""
+
+        },
+
+        "HEROKU_API": {
+
+            "description": "Isi Coy Jan Dikosongin.",
+
+            "required": true
+
+        },
+
+        "HEROKU_APP_NAME": {
+
+            "description": "Isi Coy Jan Dikosongin",
+
+            "value": "",
+
+            "required": true
+
+        }
+
     },
-    "buildpacks": [
-          {
-              "url": "heroku/python"
-          },
-          {
-              "url": "heroku/nodejs"
-          },
-          {
-              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-          }
-      ],
-      "stack": "container"
-  }
+
+  "addons": [
+
+    {
+
+      "plan": "rediscloud",
+
+      "options": {
+
+        "maxmemory-policy": "allkeys-lru",
+
+        "maxmemory-redis": "2GB"
+
+      }
+
+    }
+
+  ],
+
+  "buildpacks": [
+
+    {
+
+      "url": "heroku/python"
+
+    },
+
+    {
+
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+
+    }
+
+  ],
+
+    "formation": {
+
+        "worker": {
+
+            "quantity": 1,
+
+            "size": "eco"
+
+        }
+
+    }
+
+}
