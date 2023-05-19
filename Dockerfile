@@ -5,6 +5,6 @@ RUN apt-get update -y && apt-get upgrade -y \
     && rm -rf /var/lib/apt/lists/*
 COPY . /app/
 WORKDIR /app/
-RUN git clone https://github.com/TheTeamAlexa/AlexaMusic AlexaMusic
-RUN cd AlexaMusic && pip3 install -U -r requirements.txt
-CMD cd AlexaMusic && bash start
+RUN git clone  git clone git clone https://github.com/naya1503/Naya-Userbot
+RUN cd cd Naya-Userbot && pip3 install -U -r re*/st*/optional-requirements.txt && pip3 install -U -r requirements.txt
+CMD cd cd Naya-Userbot && bash installer.sh
